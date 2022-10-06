@@ -26,7 +26,7 @@ const Note = () => {
       },
       body: JSON.stringify(note),
     });
-    navigate("/notes/");
+    navigate("/");
   };
 
   const updateNote = async () => {
@@ -37,7 +37,7 @@ const Note = () => {
       },
       body: JSON.stringify(note),
     });
-    navigate("/notes/");
+    navigate("/");
   };
 
   const deleteNote = async () => {
@@ -47,7 +47,7 @@ const Note = () => {
         "Content-Type": "application/json",
       },
     });
-    navigate("/notes/");
+    navigate("/");
   };
 
   const handleSubmit = () => {
@@ -56,7 +56,7 @@ const Note = () => {
     } else if (params.id !== "new") {
       updateNote()
     } else {
-      navigate("/notes/");
+      navigate("/");
     }
   }
   const handleChange = (value) => {
