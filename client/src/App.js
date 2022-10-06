@@ -7,11 +7,13 @@ import NotesList from './pages/NotesList';
 function App() {
   return (
       <div className="App">
-        <Header/>
-        <Routes>
-          <Route path="/notes" element={ <NotesList/> } />
-          <Route path="/notes/:id" element={ <Note/> } />
-        </Routes>
+        <div className="container">
+          <Header/>
+          <Routes>
+            <Route path="/notes" element={ <NotesList/> } />
+            <Route path="/notes/:id" element={ <Note/> } />
+          </Routes>
+        </div>
       </div>
   );
 }

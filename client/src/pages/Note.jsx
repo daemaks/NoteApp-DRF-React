@@ -19,7 +19,7 @@ const Note = () => {
   };
 
   const createNote = async () => {
-    fetch(`/api/notes/create/`, {
+    fetch(`/api/notes/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Note = () => {
   };
 
   const updateNote = async () => {
-    fetch(`/api/notes/${params.id}/update/`, {
+    fetch(`/api/notes/${params.id}/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const Note = () => {
   };
 
   const deleteNote = async () => {
-    fetch(`/api/notes/${params.id}/delete/`, {
+    fetch(`/api/notes/${params.id}/`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const Note = () => {
       deleteNote()
     } else if (params.id !== "new") {
       updateNote()
-    } else if (params.id === "new" && note.body == null) {
+    } else {
       navigate("/notes/");
     }
   }
@@ -65,8 +65,8 @@ const Note = () => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="note">
+      <div className="note-header">
         <h3>
           <ArrowLeft onClick={handleSubmit} />
           {params.id !== 'new' ? (

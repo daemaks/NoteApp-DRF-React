@@ -15,11 +15,16 @@ const NotesList = () => {
         setNotes(data)
     }
   return (
-    <div>
-        <AddButton/>
-        {notes.map((note, index) => (
-            <ListItem key={index} note={note}/>
-        ))}
+    <div className='notes'>
+        <div className='notes-header'>
+            <h2 className='notes-title'><AddButton/></h2>
+            <p className='notes-count'>Count: {notes.length}</p>
+
+        </div>
+        <div className='notes-list'>
+            {notes.map((note, index) => (
+                <ListItem key={index} note={note}/>))}
+        </div>
     </div>
   )
 }
