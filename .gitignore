@@ -1,0 +1,32 @@
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# production
+build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Django
+.env
+*.log
+*.pog
+*.pyc
+__pycache__/
+db.sqlite3
+migrations
+
+# Envirement
+.venv/
+venv/
